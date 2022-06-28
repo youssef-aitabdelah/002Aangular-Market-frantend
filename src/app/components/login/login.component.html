@@ -16,7 +16,7 @@
         >
         <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.touched) || loginForm.get('email')?.dirty">
           <div *ngIf="loginForm.get('email')?.getError('required')">This filed is Required </div>
-          <div *ngIf="loginForm.get('email')?.getError('email')">This filed should be email address </div>
+          <div *ngIf="loginForm.get('email')?.getError('email')">This filed should be email category </div>
         </div>
       </div>
       

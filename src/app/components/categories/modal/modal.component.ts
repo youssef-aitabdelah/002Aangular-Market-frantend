@@ -1,4 +1,3 @@
-import { Address } from './../../../models/address';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
@@ -10,12 +9,12 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class ModalComponent implements OnInit {
 
   open: boolean | undefined;
-  addressForm: FormGroup;
-  @Output() modalAddress = new EventEmitter();
+  categoryForm: FormGroup;
+  @Output() modalCategory = new EventEmitter();
 
   constructor() {
 
-    this.addressForm = new FormGroup({
+    this.categoryForm = new FormGroup({
         city: new FormControl(null, Validators.required),
         street: new FormControl(null, Validators.required),
         postal: new FormControl(null, Validators.required),
@@ -28,10 +27,10 @@ export class ModalComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createAddress() {
+  createCategory() {
 
-    this.modalAddress.emit(this.addressForm.value);
-    this.addressForm.reset();
+    this.modalCategory.emit(this.categoryForm.value);
+    this.categoryForm.reset();
   }
 
 }

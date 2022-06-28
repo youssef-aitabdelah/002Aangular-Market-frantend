@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
         positionClass: 'toast-bottom-left'
       }
     );
-    this.router.navigateByUrl("/addresses");
+    this.router.navigateByUrl("/categories");
   }
 
 }

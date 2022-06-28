@@ -20,6 +20,9 @@ export class JwtInterceptor implements HttpInterceptor {
         Authorization: `Bearer ${ this.tokenService.getToken() }`
       }
     })
+
+    console.warn("get token : ", this.tokenService.getToken() );
+    console.warn("request : ",request);
     
     return next.handle(request);
   }

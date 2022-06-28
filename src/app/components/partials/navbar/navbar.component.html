@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-4">
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-4 p-2">
     <a class="navbar-brand" href="#">I-carnet</a>
     <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -7,22 +7,24 @@
     <div class="collapse navbar-collapse" id="collapsibleNavId">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li *ngIf="loggedIn" class="nav-item">
-          <a class="nav-link active" routerLink="/addresses">
+          <a class="nav-link active" routerLink="/categories">
             Home
-            <span class="sr-only">(current)</span>
+            <!-- <span class="sr-only">(current)</span> -->
           </a>
         </li>
       </ul>
+    </div>
+    <div>
       <ul *ngIf="!loggedIn" class="navbar-nav ml-auto">
         <li class="nav-item">
           <a routerLink="/register" class="nav-link">Register</a>
         </li>
-  
+
         <li class="nav-item">
           <a routerLink="/login" class="nav-link">Login</a>
         </li>
       </ul>
-  
+
       <ul *ngIf="loggedIn" class="navbar-nav ml-auto">
         <li class="nav-item">
           <a routerLink="#" class="nav-link">{{ userInfos.name }}</a>
@@ -32,7 +34,7 @@
           <button (click)="logout()" class="nav-link btn-logout">Logout</button>
         </li>
       </ul>
-    
+
 
       <!-- <ul class="navbar-nav ml-auto">
         <li *ngIf="!currentUser" class="nav-item"><a routerLink="/login" class="nav-link">Login</a></li>
@@ -40,3 +42,4 @@
       </ul> -->
     </div>
 </nav>
+
