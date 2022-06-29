@@ -1,10 +1,10 @@
 import { ToastrService } from 'ngx-toastr';
-import { AccountService } from './../../services/account.service';
-import { TokenService } from './../../services/token.service';
-import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
+import { TokenService } from 'src/app/services/token.service';
+import { AccountService } from 'src/app/services/account.service';
 
 @Component({
   selector: 'app-login',

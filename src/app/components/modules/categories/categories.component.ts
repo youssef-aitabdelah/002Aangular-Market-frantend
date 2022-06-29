@@ -1,13 +1,13 @@
-import { CategoryService } from './../../services/category.service';
 import { Component, OnInit } from '@angular/core';
 import { Category } from 'src/app/models/address';
+import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
-  selector: 'app-list-category',
-  templateUrl: './list-category.component.html',
-  styleUrls: ['./list-category.component.css']
+  selector: 'app-categories',
+  templateUrl: './categories.component.html',
+  styleUrls: ['./categories.component.css']
 })
-export class ListCategoryComponent implements OnInit {
+export class CategoriesComponent implements OnInit {
 
   categories: Category[] = [];
 

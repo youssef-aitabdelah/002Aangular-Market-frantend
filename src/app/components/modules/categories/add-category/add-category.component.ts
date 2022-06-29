@@ -1,12 +1,12 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-modal',
-  templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.css']
+  selector: 'app-add-category',
+  templateUrl: './add-category.component.html',
+  styleUrls: ['./add-category.component.css']
 })
-export class ModalComponent implements OnInit {
+export class AddCategoryComponent implements OnInit {
 
   open: boolean | undefined;
   categoryForm: FormGroup;
@@ -25,12 +25,13 @@ export class ModalComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.createCategory();
   }
 
   createCategory() {
 
     this.modalCategory.emit(this.categoryForm.value);
     this.categoryForm.reset();
+    console.warn("CategoryForm :", this.categoryForm.value)
   }
-
 }

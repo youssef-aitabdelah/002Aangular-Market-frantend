@@ -1,25 +1,23 @@
-import { ModalComponent } from './components/categories/modal/modal.component';
 import { CommonModule } from '@angular/common';
-import { RegisterComponent } from './components/register/register.component';
-import { ShowCategoriesComponent } from './components/show-categories/show-categories.component';
 import { AfterAuthGuard } from './guards/after-auth.guard';
 import { AuthGuard } from './guards/auth.guard';
-import { AddCategoryComponent } from './components/add-category/add-category.component';
+import { AddCategoryComponent } from './components/modules/categories/add-category/add-category.component';
 import { PageNotFoundComponent } from './components/partials/page-not-found/page-not-found.component';
-import { LoginComponent } from './components/login/login.component';
-import { EditCategoryComponent } from './components/edit-category/edit-category.component';
-import { ListCategoryComponent } from './components/list-category/list-category.component';
+import { EditCategoryComponent } from './components/modules/categories/edit-category/edit-category.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CategoriesComponent } from './components/modules/categories/categories.component';
+import { ShowCategoryComponent } from './components/modules/categories/show-category/show-category.component';
+import { LoginComponent } from './components/auth/login/login.component';
+import { RegisterComponent } from './components/auth/register/register.component';
 
 const routes: Routes = [
   { path: "", redirectTo: '/categories', pathMatch: 'full'},
   { path: 'categories', children: [
-      {path: "", component: ListCategoryComponent},
+      {path: "", component: CategoriesComponent},
       {path: "create", component: AddCategoryComponent},
-      {path: "modal", component: ModalComponent},
       {path: "edit/:id", component: EditCategoryComponent},
-      { path:"{id}", component: ShowCategoriesComponent }
+      { path:"{id}", component: ShowCategoryComponent }
     ], canActivate: [AuthGuard] 
   },
   { path: "login", component: LoginComponent, canActivate: [AfterAuthGuard] },
