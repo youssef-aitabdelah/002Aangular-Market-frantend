@@ -21,8 +21,7 @@ export class JwtInterceptor implements HttpInterceptor {
       }
     })
 
-    console.warn("get token : ", this.tokenService.getToken() );
-    console.warn("request : ",request);
+    console.warn("Token : ", this.tokenService.getToken() );
     
     return next.handle(request);
   }

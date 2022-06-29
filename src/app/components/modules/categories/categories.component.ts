@@ -18,13 +18,12 @@ export class CategoriesComponent implements OnInit {
   }
 
   getAllCategories(){
-    this.categoryService.getAll().subscribe((res: any) => this.categories = res);
-    console.warn("Categories : ",this.categories);
+    this.categoryService.getAll().subscribe((res: any) => console.warn("Categories : ",this.categories = res));
   }
 
   persistCategory(data: Category) {
     this.categoryService.Save(data)
-        .subscribe((res: any) => this.categories = [res, ...this.categories])
+        .subscribe((res: any) => console.warn("PersistCategory : ",this.categories = [res, ...this.categories]))
   }
 
 }

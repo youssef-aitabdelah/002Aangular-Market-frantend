@@ -7,7 +7,6 @@ import { AddCategoryComponent } from './components/modules/categories/add-catego
 import { EditCategoryComponent } from './components/modules/categories/edit-category/edit-category.component';
 import { NavbarComponent } from './components/partials/navbar/navbar.component';
 import { PageNotFoundComponent } from './components/partials/page-not-found/page-not-found.component';
-import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -18,6 +17,9 @@ import { CategoriesComponent } from './components/modules/categories/categories.
 import { ShowCategoryComponent } from './components/modules/categories/show-category/show-category.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
+import { ProductsComponent } from './components/modules/products/products.component';
+import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -29,15 +31,15 @@ import { RegisterComponent } from './components/auth/register/register.component
     LoginComponent,
     RegisterComponent,
     CategoriesComponent,
-    ShowCategoryComponent
+    ShowCategoryComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot() // ToastrModule added
+    ToastrModule.forRoot(), AppRoutingModule // ToastrModule added
   ],
   providers: [{ 
     provide: HTTP_INTERCEPTORS, 

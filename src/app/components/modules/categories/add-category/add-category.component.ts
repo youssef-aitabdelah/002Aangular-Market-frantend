@@ -10,7 +10,7 @@ export class AddCategoryComponent implements OnInit {
 
   open: boolean | undefined;
   categoryForm: FormGroup;
-  @Output() modalCategory = new EventEmitter();
+  @Output() addCategory = new EventEmitter();
 
   constructor() {
 
@@ -30,8 +30,10 @@ export class AddCategoryComponent implements OnInit {
 
   createCategory() {
 
-    this.modalCategory.emit(this.categoryForm.value);
+    this.addCategory.emit(this.categoryForm.value);
     this.categoryForm.reset();
     console.warn("CategoryForm :", this.categoryForm.value)
   }
+
+  
 }

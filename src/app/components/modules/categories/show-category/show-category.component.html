@@ -1,16 +1,43 @@
 <div class="card border-primary mt-3">
-    <div class="card-body">
-      <h3 class="card-title">Type : {{ category.type }}</h3>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item"> <strong>City : </strong> {{ category.city }}</li>
-      <li class="list-group-item"><strong>Street : </strong> {{ category.street }}</li>
-      <li class="list-group-item"><strong>Postal : </strong> {{ category.postal }}</li>
-      <li class="list-group-item"><strong>Country : </strong> {{ category.country }}</li>
-      <li class="list-group-item text-center">
-  
-        <button class="btn btn-primary mr-2">Edit</button>
-        <button class="btn btn-dark mr-2">Delete</button>
-      </li>
-    </ul>
+  <div class="card-body">
+    <h3 class="card-title">Type : {{ category.type }}</h3>
   </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"> <strong>City : </strong> {{ category.city }}</li>
+    <li class="list-group-item"><strong>Street : </strong> {{ category.street }}</li>
+    <li class="list-group-item"><strong>Postal : </strong> {{ category.postal }}</li>
+    <li class="list-group-item"><strong>Country : </strong> {{ category.country }}</li>
+    <li class="list-group-item text-center">
+
+      <button class="btn btn-primary mr-2">Edit</button>
+      <button class="btn btn-dark mr-2">Delete</button>
+    </li>
+  </ul>
+</div>
+
+<div class="container">
+  <div class="outer-card">
+    <div class="first-row">
+      <div class="card"></div> <img src="https://imgur.com/S5J6YYI.png">
+    </div>
+    <div class="second-row">
+      <h3>Eclipse Rosto Armchair</h3>
+      <div class="space"> <span>MATERIAL</span> <span>Cotton</span> </div>
+      <div class="space"> <span>ITEM DIMENSIONS</span> <span>29 <i class="fa fa-close"></i> 21 <i
+            class="fa fa-close"></i> 34 cm</span> </div>
+      <div class="space"> <span>FURNITURE FINISH</span> <span>Wax</span> </div>
+      <div class="space"> <span>ITEM WEIGHT</span> <span>6.4 Kilograms</span> </div>
+    </div>
+    <ul class="third-row" id="list-row">
+      <li id="1" colors="red" class="active"></li>
+      <li id="2" colors="green"></li>
+      <li id="3" colors="black"></li>
+      <li id="4" colors="blue"></li>
+    </ul>
+    <div class="fourth-row">
+      <h4>$280</h4> <span class="minus">-</span>
+      <p>2</p> <span class="plus">+</span>
+    </div>
+    <div class="button"> <button>Add to cart</button> </div>
+  </div>
+</div>

@@ -11,14 +11,7 @@ export class CategoryService {
   constructor(private http: HttpClient) { }
 
   getAll(){
-    console.warn("Service Categorye",this.http.get("http://localhost:8080/categories"));
-    console.warn("Service Categorye2",this.http.get(`${environment.apiUrl}/categories`));
-    return this.http.get(`${environment.apiUrl}/categories`);
-    // return this.http.get("http://localhost:8080/categories");
-  }
-
-  getAll2() {
-    return this.http.get(`${environment.apiUrl}/categories`);
+    return this.http.get(`${environment.apiUrl}/categories`); // return this.http.get("http://localhost:8080/categories");
   }
 
   Save(data: Category) {

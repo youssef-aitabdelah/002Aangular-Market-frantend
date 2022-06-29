@@ -35,7 +35,6 @@ export class TokenService {
 
   payload(token: string){
     const payload = token.split('.')[1];//deuxième partie de token
-    console.log('payload : ', payload);
     return this.decode(payload);
   }
 
